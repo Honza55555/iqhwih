@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: coffee-perk-bot
+    env: python
+    runtime:
+      version: '3.13'
+    region: frankfurt
+    plan: free
+    buildCommand: "pip install python-telegram-bot==22.1"
+    startCommand: "python app.py"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: YOUR_BOT_TOKEN
+      - key: WEBHOOK_URL
+        value: https://${WEBHOOK_SUBDOMAIN}.onrender.com/webhook
