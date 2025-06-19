@@ -1,8 +1,10 @@
+import asyncio # Toto je chybějící import
+import logging
+import os
 from telegram import Bot, Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
-import logging
-from typing import List
-import os
+
+# Zbytek kódu zůstává stejný jako v předchozí verzi
 
 # Nastavení logování
 logging.basicConfig(
